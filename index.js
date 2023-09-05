@@ -47,6 +47,10 @@ app.get('/api/shorturl/:shortcode',(req, res)=>{
   }
   res.redirect(originalUrl);
 })
+
+app.get('/api/urls',(req, res)=>{
+  res.json(urlDatabase);
+})
 app.listen(port, function() {
   console.log(`Listening on port ${port}`);
 });
